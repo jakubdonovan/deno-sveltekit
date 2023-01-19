@@ -4,6 +4,10 @@ import UnoCSS from 'npm:unocss/vite'
 import { presetUno, presetIcons, extractorSvelte } from 'npm:unocss';
 // import presetWebFonts from 'npm:@unocss/preset-web-fonts';
 // import 'npm:@iconify/json';
+import Onboard from 'npm:@web3-onboard/core';
+import injectedModule from 'npm:@web3-onboard/injected-wallets';
+// import 'npm:svelte-ethers-store';
+
 
 
 const config: UserConfig = {
@@ -11,9 +15,9 @@ const config: UserConfig = {
 		sveltekit(),
 		UnoCSS({
 			extractors: [extractorSvelte],
-			mode: 'svelte-scoped',
+			// mode: 'svelte-scoped',
 			presets: [
-				presetUno(), presetIcons()
+				presetUno()
 			],
 		})
 	]

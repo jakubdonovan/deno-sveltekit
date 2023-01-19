@@ -1,4 +1,6 @@
 <script lang="ts">
+	import ConnectButton from "$lib/components/ConnectButton.svelte";
+
    let todos = [
       {content: 'Go to the gym!', isEditing: false, checked: false}, 
       {content: 'Cook pasta for dinner!', isEditing: false, checked: false}
@@ -11,7 +13,7 @@
    const deleteTodo = (i:number) => todos = todos.filter(todo => todos.indexOf(todo) !== i)
 </script>
 
-<div class="i-ic:sharp-rocket-launch text-red-900"></div>
+<ConnectButton />
 
 <div class="grid gap-5">
    <h2 class="text-red">TODO LIST</h2>
